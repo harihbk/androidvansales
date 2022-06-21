@@ -1,3 +1,6 @@
 rootProject.name = 'mapproj'
+include ':@homee_react-native-mapbox-navigation'
+project(':@homee_react-native-mapbox-navigation').projectDir = new File(rootProject.projectDir, '../node_modules/@homee/react-native-mapbox-navigation/android')
 apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+
 include ':app'

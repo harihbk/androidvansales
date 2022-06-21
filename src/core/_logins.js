@@ -1,12 +1,11 @@
 import React , { Component, Fragment }  from 'react'
-import { ImageBackground ,SafeAreaView ,Button, StyleSheet, Text, View, Image , TextInput ,Alert } from "react-native";
+import { ImageBackground, Button ,SafeAreaView , StyleSheet, Text, View, Image , TextInput ,Alert } from "react-native";
 import { makeStyles } from "@material-ui/core/styles";
 import { Formik } from 'formik'
-import * as yup from 'yup';
-// import { Button  } from 'react-native-paper'
+import * as yup from 'yup'
 
- 
- 
+
+
 
 const HeaderButton = ({ handleSubmit, navigation }) => {
   React.useLayoutEffect(() => {
@@ -20,6 +19,7 @@ const HeaderButton = ({ handleSubmit, navigation }) => {
 }
 
 
+const image = { uri: "https://reactjs.org/logo-og.png" };
 
 
 export default function Login({navigation}) {
@@ -45,8 +45,8 @@ export default function Login({navigation}) {
 
 
   return (
-    <View width="100%" height="100%" style={styles.main_wrapper}>
-      <ImageBackground source={require('../../assets/images/login_bg.png')} resizeMode="cover" style={styles.image} >
+    <View  style={styles.main_wrapper}>
+      <ImageBackground source={require('../../assets/images/login_bg.png')} resizeMode="cover" className={styles.image} >
         <View  style={styles.container}>
           <View style={styles.navbar}>
             <Image source={require('../../assets/images/van_logo.png')} style={{width: 120, height:50}} />
@@ -59,12 +59,12 @@ export default function Login({navigation}) {
               </View>
                <View style={styles.rightCol}>   
                 <View style={styles.innerBox}>
-                  <View style={styles.darkbox}> 
+                  <View style={styles.darkbox}>
                     <View>
-                        
-                     <Formik
+{/*                        
+                    <Formik
             onSubmit={values => console.log(values)}
-            initialValues={{  
+            initialValues={{ 
           email: '', 
           password: '' 
         }}
@@ -117,7 +117,7 @@ export default function Login({navigation}) {
             
           </View>
         )}
-      </Formik>  
+      </Formik>  */}
                     
                     </View>
                     
@@ -152,7 +152,8 @@ const styles = StyleSheet.create({
       padding : 30
     },
     leftCol : {
-      width : "50%",
+      width : 50,
+    
     },
     rightCol : {
       width : "50%",
@@ -211,11 +212,11 @@ const styles = StyleSheet.create({
       height: '100%',
       paddingBottom : 12,
       paddingTop : 30,
-      width : '100%',
+      width : '100%'
     },
     main_wrapper : {
-      height: '100%',
-      backgroundColor : '#eee'
+      height: "100%",
+      width:"100%",
     },
     container :{
       flex: 1,
@@ -227,7 +228,7 @@ const styles = StyleSheet.create({
       paddingRight :25
     },
     navbar : {
-      height : 60,
+      height : 60
     },
     text: {
       color: "white",

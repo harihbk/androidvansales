@@ -12,6 +12,8 @@ target 'mapproj' do
     :hermes_enabled => false
   )
 
+  pod 'react-native-mapbox-navigation', :path => '../node_modules/@homee/react-native-mapbox-navigation'
+
   target 'mapprojTests' do
     inherit! :complete
     # Pods for testing
